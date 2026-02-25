@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raja Srivastava - VIP Prediction</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:#fff;
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+animation:fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+h1{
+font-size:42px;
+font-weight:800;
+background:linear-gradient(90deg,#ffd700,#ffcc00,#fff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:20px;
+}
+
+.timer-box{
+margin:20px 0;
+padding:20px;
+border-radius:15px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+box-shadow:0 0 25px rgba(255,215,0,0.4);
+}
+
+.timer-title{
+font-size:18px;
+letter-spacing:1px;
+margin-bottom:10px;
+color:#ffd700;
+}
+
+#countdown{
+font-size:38px;
+font-weight:700;
+}
+
+.features{
+margin:25px 0;
+}
+
+.feature{
+margin:12px 0;
+font-size:18px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+}
+
+.tick{
+width:18px;
+height:18px;
+border-radius:50%;
+background:#00ff88;
+box-shadow:0 0 10px #00ff88,0 0 20px #00ff88;
+animation:glow 1s infinite alternate;
+}
+
+@keyframes glow{
+from{box-shadow:0 0 5px #00ff88;}
+to{box-shadow:0 0 25px #00ff88;}
+}
+
+.join-btn{
+margin-top:25px;
+padding:16px 40px;
+font-size:18px;
+font-weight:600;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:linear-gradient(45deg,#ffd700,#ff9900);
+color:#000;
+display:inline-flex;
+align-items:center;
+gap:12px;
+text-decoration:none;
+transition:0.4s;
+box-shadow:0 0 20px rgba(255,215,0,0.6);
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+}
+
+.join-btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 40px rgba(255,215,0,1);
+}
+
+.telegram-icon{
+width:22px;
+}
+
+.footer{
+margin-top:25px;
+font-size:12px;
+opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Raja Srivastava</h1>
+
+<div class="timer-box">
+<div class="timer-title">VIP Joining Ends In</div>
+<div id="countdown">50</div>
+</div>
+
+<div class="features">
+<div class="feature"><div class="tick"></div> High Accuracy Cricket Prediction</div>
+<div class="feature"><div class="tick"></div> Premium VIP Analysis</div>
+<div class="feature"><div class="tick"></div> Limited Entry Access</div>
+</div>
+
+<a href="https://t.me/+1zBC8V9sUhBjMGY1" class="join-btn" onclick="playClick()">
+<svg class="telegram-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="#000">
+<path d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0zm55.2 81.2l-19.8 93.6c-1.5 6.7-5.4 8.4-10.9 5.2l-30.2-22.2-14.6 14c-1.6 1.6-2.9 2.9-6 2.9l2.1-30.2 55-49.7c2.4-2.1-.5-3.3-3.7-1.2l-68 42.8-29.3-9.2c-6.4-2-6.5-6.4 1.3-9.5l114.6-44.2c5.3-2 9.9 1.3 8.5 9.5z"/>
+</svg>
+Join Raja Bhai Vip
+</a>
+
+<div class="footer">
+For Educational & Analysis Purpose Only
+</div>
+
+</div>
+
+<audio id="clickSound">
+<source src="https://www.soundjay.com/buttons/sounds/button-16.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+let timeLeft = 50;
+let countdownElement = document.getElementById("countdown");
+
+let timer = setInterval(function(){
+timeLeft--;
+countdownElement.textContent = timeLeft;
+if(timeLeft <= 0){
+clearInterval(timer);
+countdownElement.textContent = "Closed";
+}
+},1000);
+
+function playClick(){
+document.getElementById("clickSound").play();
+}
+</script>
+
+</body>
+</html>
