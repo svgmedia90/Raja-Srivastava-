@@ -45,9 +45,31 @@ from{opacity:0;transform:translateY(40px)}
 to{opacity:1;transform:translateY(0)}
 }
 
-h1{
-font-size:28px;
+/* 🔥 LOGO STYLE */
+.logo-box{
 margin-bottom:20px;
+display:flex;
+justify-content:center;
+}
+
+.logo-box img{
+width:100px;
+height:100px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #ffd700;
+box-shadow:0 0 25px #ffd700,0 0 60px rgba(255,215,0,0.8);
+animation:logoGlow 2s infinite alternate;
+}
+
+@keyframes logoGlow{
+from{box-shadow:0 0 15px #ffd700;}
+to{box-shadow:0 0 60px #ffd700;}
+}
+
+h1{
+font-size:26px;
+margin-bottom:15px;
 background:linear-gradient(90deg,#ffd700,#ffffff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -57,33 +79,33 @@ background:linear-gradient(90deg,#ffd700,#ffffff);
 font-size:14px;
 letter-spacing:2px;
 color:#ffd700;
-margin-bottom:10px;
+margin-bottom:8px;
 }
 
 #countdown{
-font-size:38px;
-margin-bottom:20px;
+font-size:36px;
+margin-bottom:18px;
 color:#fff;
 text-shadow:0 0 15px #ffd700;
 }
 
 .features{
-margin:20px 0;
+margin:18px 0;
 font-size:14px;
 }
 
 .features div{
-margin:8px 0;
+margin:6px 0;
 color:#00ffcc;
 text-shadow:0 0 10px #00ffcc;
 }
 
 .join-btn{
-margin-top:20px;
-padding:15px 35px;
+margin-top:18px;
+padding:14px 30px;
 border-radius:50px;
 border:none;
-font-size:16px;
+font-size:15px;
 font-weight:700;
 cursor:pointer;
 background:linear-gradient(45deg,#ffd700,#ff9900);
@@ -126,20 +148,23 @@ box-shadow:0 0 50px #ffd700;
 }
 
 .telegram-icon{
-width:20px;
+width:18px;
 }
 
 .footer{
-margin-top:15px;
+margin-top:12px;
 font-size:10px;
 opacity:.6;
 }
-
 </style>
 </head>
 <body>
 
 <div class="card">
+
+<div class="logo-box">
+<img src="logo.png" alt="Logo">
+</div>
 
 <h1>Raja Srivastava</h1>
 
